@@ -1,0 +1,149 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #000;
+}
+
+.header{
+    text-align: center;
+    text-transform: uppercase;
+    padding: 32px;
+    background-color: #0a0a23;
+    color: #fff;
+    border-bottom: 4px solid #fdb347;
+}
+
+.gallery{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 10px;
+}
+.gallery img{
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 110px;
+}
+
+.gallery img{
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover{
+    transform: scale(1.2);
+    gap: 20px;
+}
+
+.gallery::after{
+    content: "";
+    width: 350px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #b10a0a;
+}
+
+.foot1, .foot2{
+    margin: 10px;
+    font-weight: bolder;
+}
+
+.foot1 :hover, .foot2 :hover{
+    font-family: 'Lobster', cursive;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-color: #0a0a23;
+}
+
+/* Media Queries */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+    .header {
+        padding: 20px;
+        font-size: 1.5rem;
+    }
+
+    .gallery img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 50px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .foot1, .foot2 {
+        margin: 5px 0;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+    .header {
+        padding: 25px;
+        font-size: 2rem;
+    }
+
+    .gallery img {
+        max-width: 45%;
+        height: auto;
+        border-radius: 70px;
+    }
+
+    .gallery {
+        gap: 20px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+    .header {
+        padding: 30px;
+        font-size: 2.5rem;
+    }
+
+    .gallery img {
+        max-width: 30%;
+        height: auto;
+        border-radius: 90px;
+    }
+
+    .gallery {
+        gap: 25px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {
+    .header {
+        padding: 32px;
+        font-size: 3rem;
+    }
+
+    .gallery img {
+        max-width: 25%;
+        height: auto;
+        border-radius: 100px;
+    }
+
+    .gallery {
+        gap: 30px;
+    }
+}
